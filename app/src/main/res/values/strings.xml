@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Accounting Finances</string>
+
+    <!-- MainActivity -->
+    <string name="Begin">Начать</string>
+    <string name="About">О приложении</string>
+
+    <!-- AboutActivity -->
+    <string name="AboutInfo">Это приложение разработанно для учёта финансов.\n Автор - Данил Алагов.</string>
+
+    <!-- Accounting info -->
+    <string name="AccountingInfo">Введите сумму дохода</string>
+    <string name="IncomeExample">10000</string>
+
+</resources>
