@@ -5,13 +5,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_accounting.*
 import java.lang.reflect.Type
 import java.util.*
-import kotlin.collections.ArrayList
 
 class AccountActivity : AppCompatActivity() {
 
@@ -97,23 +95,47 @@ class AccountActivity : AppCompatActivity() {
         }
 
         Et1.doOnTextChanged { text, _, _, _ ->
-            evArr[0] = text.toString().toInt()
-            Tv1.text = (tvArr[0] - evArr[0]).toString()
+            if (text != null) {
+                if (text.isNotEmpty()) {
+                    evArr[0] = text.toString().toInt()
+                    Tv1.text = (tvArr[0] - evArr[0]).toString()
+                }
+                else
+                    Tv1.text = tvArr[0].toString()
+            }
         }
 
         Et2.doOnTextChanged { text, _, _, _ ->
-            evArr[1] = text.toString().toInt()
-            Tv2.text = (tvArr[1] - evArr[1]).toString()
+            if (text != null) {
+                if (text.isNotEmpty()) {
+                    evArr[1] = text.toString().toInt()
+                    Tv2.text = (tvArr[1] - evArr[1]).toString()
+                }
+                else
+                    Tv2.text = tvArr[1].toString()
+            }
         }
 
         Et3.doOnTextChanged { text, _, _, _ ->
-            evArr[2] = text.toString().toInt()
-            Tv3.text = (tvArr[2] - evArr[2]).toString()
+            if (text != null) {
+                if (text.isNotEmpty()) {
+                    evArr[2] = text.toString().toInt()
+                    Tv3.text = (tvArr[2] - evArr[2]).toString()
+                }
+                else
+                    Tv3.text = tvArr[2].toString()
+            }
         }
 
         Et4.doOnTextChanged { text, _, _, _ ->
-            evArr[3] = text.toString().toInt()
-            Tv4.text = (tvArr[3] - evArr[3]).toString()
+            if (text != null) {
+                if (text.isNotEmpty()) {
+                    evArr[3] = text.toString().toInt()
+                    Tv4.text = (tvArr[3] - evArr[3]).toString()
+                }
+                else
+                    Tv4.text = tvArr[3].toString()
+            }
         }
 
         Rv.layoutManager = LinearLayoutManager(this)
